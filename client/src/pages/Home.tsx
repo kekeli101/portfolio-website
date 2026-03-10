@@ -4,9 +4,9 @@ import { useState } from "react";
 
 /**
  * Portfolio Website - Home Page
- * Design: Organic Glassmorphism
- * - Warm cream background with frosted glass cards
- * - Terracotta and sage green accents
+ * Design: Organic Glassmorphism - Dark Theme
+ * - Deep navy/slate background with frosted glass cards
+ * - Warm terracotta and sage green accents
  * - Smooth animations and organic curves
  * - Typography: Playfair Display for headings, Poppins for body
  */
@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/40 backdrop-blur-md border-b border-white/20">
+      <nav className="sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
         <div className="container flex items-center justify-between py-4">
           <div className="text-2xl font-bold gradient-text">Portfolio</div>
           <div className="flex gap-6">
@@ -75,9 +75,9 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48">
+      <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48 bg-gradient-to-b from-slate-900 via-slate-800 to-background">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 opacity-20"
           style={{
             backgroundImage:
               "url('https://d2xsxph8kpxj0f.cloudfront.net/310419663028885541/cof2pg97L2vDjzSxRmuQN4/hero-background-QvVWi9W6S3jFyyFAkmLNjP.webp')",
@@ -85,7 +85,7 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-white/30 to-transparent" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 to-transparent" />
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
@@ -93,7 +93,7 @@ export default function Home() {
               Crafting Digital
               <span className="gradient-text"> Experiences</span>
             </h1>
-            <p className="text-lg md:text-xl text-foreground/70 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/80 mb-8 leading-relaxed">
               I'm a creative developer passionate about building beautiful, functional web applications. Currently working on innovative projects that blend design and technology.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -109,11 +109,11 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-background to-white/30">
+      <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-background to-slate-900/30">
         <div className="container">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Featured Projects</h2>
-            <p className="text-lg text-foreground/60">Explore the work I'm currently focused on and recently completed.</p>
+            <p className="text-lg text-foreground/70">Explore the work I'm currently focused on and recently completed.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,7 +132,7 @@ export default function Home() {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
                 )}
 
@@ -151,14 +151,14 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <p className="text-foreground/70 mb-4 leading-relaxed">{project.description}</p>
+                  <p className="text-foreground/80 mb-4 leading-relaxed">{project.description}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-white/50 text-foreground/70 px-3 py-1 rounded-full border border-white/30"
+                        className="text-xs bg-white/5 text-foreground/70 px-3 py-1 rounded-full border border-white/20"
                       >
                         {tag}
                       </span>
@@ -183,15 +183,15 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 md:py-32 bg-background">
+      <section id="about" className="py-20 md:py-32 bg-background border-y border-white/5">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About Me</h2>
-              <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
+              <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
                 I'm a full-stack developer with a passion for creating intuitive, beautiful digital experiences. With expertise in modern web technologies and a keen eye for design, I bridge the gap between functionality and aesthetics.
               </p>
-              <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
                 When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects, or sharing knowledge with the developer community.
               </p>
               <div className="flex gap-4">
@@ -227,7 +227,7 @@ export default function Home() {
                 ].map((skill) => (
                   <div key={skill.category}>
                     <h4 className="font-semibold text-foreground mb-2">{skill.category}</h4>
-                    <p className="text-foreground/60">{skill.skills}</p>
+                    <p className="text-foreground/70">{skill.skills}</p>
                   </div>
                 ))}
               </div>
@@ -237,11 +237,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-background via-white/20 to-background">
+      <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-background via-slate-800/20 to-background">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Let's Work Together</h2>
-            <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+            <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
               I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate or just say hello!
             </p>
 
@@ -263,18 +263,18 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground/5 border-t border-white/20 py-8">
+      <footer className="bg-black/30 border-t border-white/10 py-8">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-foreground/60 text-sm">© 2024 My Portfolio. All rights reserved.</p>
+            <p className="text-foreground/70 text-sm">© 2024 My Portfolio. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors text-sm">
+              <a href="#" className="text-foreground/70 hover:text-foreground transition-colors text-sm">
                 Privacy
               </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors text-sm">
+              <a href="#" className="text-foreground/70 hover:text-foreground transition-colors text-sm">
                 Terms
               </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors text-sm">
+              <a href="#" className="text-foreground/70 hover:text-foreground transition-colors text-sm">
                 Sitemap
               </a>
             </div>
