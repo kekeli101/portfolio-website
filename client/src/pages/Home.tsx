@@ -19,7 +19,7 @@ export default function Home() {
       <a className="wordmark" href="#top"><span className="wordmark-mark">K</span><span>kekeli.dev</span></a>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="site-nav">{menuOpen ? "Close" : "Menu"} <span>↘</span></button>
       <nav id="site-nav" className={`site-nav ${menuOpen ? "open" : ""}`} aria-label="Main navigation">
-        <a href="#work" onClick={closeMenu}>Work</a><a href="#about" onClick={closeMenu}>About</a><a href="#photography" onClick={closeMenu}>Photography</a><a href="#contact" onClick={closeMenu}>Contact</a>
+        <a href="#work" onClick={closeMenu}>Work</a><a href="#about" onClick={closeMenu}>About</a><a href="#photography" onClick={closeMenu}>Photography</a><a href="wa.me/233558694381" onClick={closeMenu}>Contact</a>
       </nav>
     </header>
 
